@@ -1,5 +1,5 @@
-piVersion: v1  # mostly it is v1
-kind: pod
+apiVersion: v1  # mostly it is v1
+kind: Pod
 metadata: # it is nothing but information
   name: hello-pod
   namespace: roboshop
@@ -8,7 +8,7 @@ spec:
   - name: container-1 # container1
     image: nginx 
     ports:
-    - containerport: 80
+    - containerPort: 80
   - name: container-2 # container2
     image: almalinux:8 
     command: ["sleep","100"]
