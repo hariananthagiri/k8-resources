@@ -1,19 +1,16 @@
-piVersion: v1  # mostly it is v1
-kind: pod
-metadata: # it is nothing but information
-  name: hello-pod
-  namespace: roboshop
+apiVersion: v1
+kind: Pod
+metadata:
+  name: label-demo
   labels:
-    course: aws
-    trainer: shiva
-  annotations:
-    jenkinsurl: "https://jenkins.com"
+    course: DevOps
+    Trainer: "SivakumarReddy"
+  annotations: 
+    jenkinsURL: "Https://jenkins.io"
 spec:
-  containers: # list of containers      
-  - name: container-1 # container1
-    image: nginx 
+  # list of containers
+  containers:
+  - name: hello-pod
+    image: nginx
     ports:
-    - containerport: 80
-  - name: container-2 # container2
-    image: almalinux:8 
-    command: ["sleep","100"]
+    - containerPort: 80
