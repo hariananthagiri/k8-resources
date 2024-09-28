@@ -1,0 +1,4 @@
+apiVersion: v1  # mostly it is v1
+kind: Namespace
+metadata: # it is nothing but information
+  name: roboshop
