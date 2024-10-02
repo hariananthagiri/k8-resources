@@ -9,7 +9,8 @@ spec:
     image: nginx
     ports:
     - containerPort: 80
-      envFrom:
-      - configMapKeyRef:
-        name: roboshop-configmap
+    envFrom:
+    - configMapKeyRef:
+      name: roboshop-configmap
 # instad of giveing multiple keys use below syntax that make our code csharter and easyer
+
