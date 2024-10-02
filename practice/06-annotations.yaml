@@ -1,14 +1,14 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  namespace: roboshop1
   name: roboshop-annotation
+  namespace: roboshop1
   labels:   
     key1: value1
     key2: value2
   annotation:   
-    jenkinsurl: "https://jenkins.com"
-    google: "www.google.com"
+    jenkins.url: "https://jenkins.com"
+    google.url: "www.google.com"
 spec:
   containers:
   - name: container-1
