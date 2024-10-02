@@ -10,7 +10,7 @@ metadata:
     jenkinsurl: "https://jenkins.com"
     google: "www.google.com"
 spec:
-  containers:+
+  containers:
   - name: container-1
     image: nginx
     ports:
