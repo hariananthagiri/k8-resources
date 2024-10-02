@@ -4,10 +4,10 @@ metadata:
   namespace: roboshop1
   name: roboshop-lables
   labels:   
-    key: lable-1
-    value: "LABLE-1"
-    key: lable-2
-    value: "LABLE-2"
+    # key: lable-1
+    # value: "LABLE-1"
+    key1: value1
+    key2: value2
 
 spec:
   containers:
