@@ -7,10 +7,10 @@ metadata:
     key1: value1
     key2: value2
   annotation:   
-    JenkinsURL: "https://jenkins.com"
-    Google: "www.google.com"
+    jenkinsurl: "https://jenkins.com"
+    google: "www.google.com"
 spec:
-  containers:
+  containers:+
   - name: container-1
     image: nginx
     ports:
