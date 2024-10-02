@@ -11,6 +11,5 @@ spec:
     - containerPort: 80
     envFrom:
     - configMapRef:
-      name: roboshop-configmap
+        name: roboshop-configmap
 # instad of giveing multiple keys use below syntax that make our code csharter and easyer
-
