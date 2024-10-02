@@ -16,4 +16,4 @@ spec:
         memory: "68Mi" # mb is called as mi here
       limits:
         cpu: "200m"
-        memory: "128Mi"
+        memory: "128Mi"+
