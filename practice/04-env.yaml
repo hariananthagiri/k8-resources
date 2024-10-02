@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: roboshop1-pod
+  name: roboshop-env
   namespace: roboshop1
 spec:
   containers:
@@ -11,6 +11,6 @@ spec:
     - containerPort: 80
     env:
     - name: NAME
-      value: "HARIKRISHNA"
+      value: "HARI KRISHNA"
 
 
