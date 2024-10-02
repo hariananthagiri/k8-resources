@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: config-pod
+  namespace: roboshop1
+spec:
+  containers:
+  - name: container-1
+    image: nginx
+    ports:
+    - containerPort: 80
+    envFrom:
+      - configMapKeyRef:
+        name: roboshop-configmap
+# instad of giveing multiple keys use below syntax that make our code csharter and easyer
