@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: config-pod
+  name: pod-config
   namespace: roboshop1
 spec:
   containers:
