@@ -6,6 +6,9 @@ metadata:
   labels:   
     key: lable-1
     value: "LABLE-1"
+  labels:   
+    key: lable-2
+    value: "LABLE-3"
 
 spec:
   containers:
