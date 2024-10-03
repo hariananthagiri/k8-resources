@@ -3,12 +3,12 @@ kind: Pod
 metadata:
   name: clusterip-pod
   namespace: roboshop1
-  lables:
+  labels:
     demo: clusterip-service
     project: roboshop-clusterip
 spec:
   containers:
-  - name: container-1
+  - name: container-1  
     image: nginx
     ports:
     - containerPort: 80
@@ -27,3 +27,4 @@ spec:
   - protocol: TCP
     port: 80 #service-port
     targetPort: 80 #container-port
+
