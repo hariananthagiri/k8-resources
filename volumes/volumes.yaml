@@ -4,19 +4,19 @@ metadata:
   name: volumes-pod
   namespace: roboshop1
 spec:
-containers:
-  - name: web
-    image: nginx
-    imagePullPolicy: Always
-    volumeMounts:
+  containers:
+    - name: web
+      image: nginx
+      imagePullPolicy: Always
+      volumeMounts:
+      - name: nginx-conf
+        mountPath: /etc/nginx/nginx.conf
+        subPath: nginx.conf
+        readOnly: true
+    volumes:
     - name: nginx-conf
-      mountPath: /etc/nginx/nginx.conf
-      subPath: nginx.conf
-      readOnly: true
-  volumes:
-  - name: nginx-conf
-    configMap:
-      name: web
-      items:
-        - key: nginx.conf
-          path: nginx.conf
+      configMap:
+        name: web
+        items:
+          - key: nginx.conf
+            path: nginx.conf
