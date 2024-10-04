@@ -2,7 +2,7 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: web
-  namespace: roboshop
+  namespace: roboshop1
 data:
   nginx.conf: |
     user www-data;
