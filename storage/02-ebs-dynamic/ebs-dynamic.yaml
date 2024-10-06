@@ -1,9 +1,9 @@
-# apiVersion: storage.k8s.io/v1
-# kind: StorageClass
-# metadata:
-#   name: ebs-sc
-# provisioner: ebs.csi.aws.com
-# volumeBindingMode: WaitForFirstConsumer
+apiVersion: storage.k8s.io/v1
+kind: StorageClass
+metadata:
+  name: ebs-sc
+provisioner: ebs.csi.aws.com
+volumeBindingMode: WaitForFirstConsumer
 ---
 apiVersion: v1
 kind: PersistentVolumeClaim
@@ -31,7 +31,7 @@ spec:
     - name: nginx-data
       mountPath: /usr/share/nginx/html
   nodeSelector:
-    zone: 1b
+    zone: 1a
   volumes:
   - name: nginx-data
     persistentVolumeClaim:
