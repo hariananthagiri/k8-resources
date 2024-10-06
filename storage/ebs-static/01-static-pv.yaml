@@ -1,0 +1,17 @@
+# persistence volume creation
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: ebs-static
+spec:
+  accessModes:
+  - ReadWriteOnce #EBS volume should have readwriteonce, because it HD.
+  capacity:
+    storage: 10Gi
+  csi:
+    driver: ebs.csi.aws.com
+    fsType: ext4
+    volumeHandle: vol-095b046ae862ee1ff
+
+
+
