@@ -38,15 +38,15 @@ spec:
   containers:
   - name: demo-container
     image: nginx
-    volumeMount: 
+    volumeMounts: 
     - name: demo-vm
       mountPath: /usr/share/nginx/html/
   nodeSelector:
     zone: 1a
   volumes:
   - name: demo-volume
-  PersistentVolumeClaim: 
-    claimName: demo-pvc
+    PersistentVolumeClaim: 
+      claimName: demo-pvc
 # ---
 # # attaching resources
 # apiVersion: v1
