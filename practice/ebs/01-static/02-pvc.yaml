@@ -3,10 +3,13 @@ kind: PersistentVolumeClaim
 metadata:
   name: demo-pvc
 spec:
-  StorageClassName: "" # it is empty in static type 
+  storageClassName: "" 
   volumeName: demo-static-volume
   accessModes:
     - ReadWriteOnce # only for ebs
   resources:
     requests:
       storage: 5Gi
+
+
+      
