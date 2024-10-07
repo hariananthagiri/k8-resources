@@ -1,0 +1,13 @@
+# attaching resources
+apiVersion: v1
+kind: Services
+metadata:
+  name: demo-resource
+spec:
+  type: LoadBalancer
+  selector:
+    demo: demo-label
+  ports:
+  - protocol: TCP
+    port: 80 #service-port
+    targetPort: 80 #container-port
