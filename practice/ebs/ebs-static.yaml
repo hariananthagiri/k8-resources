@@ -28,25 +28,25 @@ spec:
       storage: 5Gi
 ---
 # attaching pvc to pod
-apiVersion: v1
-kind: Pod
-metadata:
-  name: demo-pod
-  labels:
-    demo: demo-label
-spec:
-  containers:
-  - name: demo-container
-    image: nginx
-    volumeMount: 
-    - name: demo-vm
-      mountPath: /usr/share/nginx/html/
-  nodeSelector:
-    zone: 1a
-  volumes:
-  - name: demo-volume
-  PersistentVolumeClaim: 
-    claimName: demo-pvc
+# apiVersion: v1
+# kind: Pod
+# metadata:
+#   name: demo-pod
+#   labels:
+#     demo: demo-label
+# spec:
+#   containers:
+#   - name: demo-container
+#     image: nginx
+#     volumeMount: 
+#     - name: demo-vm
+#       mountPath: /usr/share/nginx/html/
+#   nodeSelector:
+#     zone: 1a
+#   volumes:
+#   - name: demo-volume
+#   PersistentVolumeClaim: 
+#     claimName: demo-pvc
 # ---
 # # attaching resources
 # apiVersion: v1
