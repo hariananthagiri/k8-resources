@@ -1,4 +1,3 @@
-# attaching resources
 apiVersion: v1
 kind: Services
 metadata:
