@@ -10,10 +10,13 @@ spec:
     image: nginx
     volumeMounts: 
     - name: demo-vm
-      mountPath: /usr/share/nginx/html/
+      mountPath: /usr/share/nginx/html
   nodeSelector:
     zone: 1a
   volumes:
   - name: demo-vm
-    PersistentVolumeClaim: 
+    persistentVolumeClaim: 
       claimName: demo-pvc
+
+
+      
