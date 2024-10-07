@@ -44,7 +44,7 @@ spec:
   nodeSelector:
     zone: 1a
   volumes:
-  - name: demo-volume
+  - name: demo-vm
     PersistentVolumeClaim: 
       claimName: demo-pvc
 # ---
