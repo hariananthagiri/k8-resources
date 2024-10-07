@@ -9,10 +9,10 @@ spec:
   capasity:
     storage: 10Gi
   csi:
-  driver: ebs.csi.aws.com
-  fsType: ext4
-  volumeHandle: vol-0da1eaeda19787d1b
----
+    driver: ebs.csi.aws.com
+    fsType: ext4
+    volumeHandle: vol-0da1eaeda19787d1b
+    ---
 # pvc creation
 apiVersion: v1
 kind: PersistentVolumeClaim
