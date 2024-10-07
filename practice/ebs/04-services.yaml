@@ -14,15 +14,4 @@ spec:
 
 
 
-    apiVersion: v1
-kind: Service
-metadata:
-  name: ebs-static
-spec:
-  type: LoadBalancer
-  selector:
-    demo: ebs-static
-  ports:
-  - protocol: TCP
-    port: 80 #service-port
-    targetPort: 80 #container-port
+    
