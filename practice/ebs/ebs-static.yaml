@@ -1,0 +1,49 @@
+# pv creation
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: demo-pv
+spec:
+  accessModes:
+  - ReadWriteOnce # only for ebs
+  capasity:
+    storage: 10Gi
+  csi:
+  driver: ebs.csi.aws.com
+  fsType: ext4
+  volumeHandle: vol-0da1eaeda19787d1b
+---
+# pvc creation
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: demo-pvc
+spec:
+  StorageClassName: # it is empty in static type 
+  volumeName: demo-static-volume
+  accessModes:
+    - ReadWriteOnce # only for ebs
+  resources:
+    requests:
+      storage: 5Gi
+---
+# attaching pvc to pod
+apiVersion: v1
+kind: Pod
+metadata:
+  name: demo-pod
+  labels:
+    demo: demo-label
+spec:
+  containers:
+  - name: demo-container
+    image: nginx
+    volumeMount: 
+    - name: demo-vm
+      mountPath: /usr/share/nginx/html/
+  nodeSelector:
+    zone: 1a
+  volumes:
+  - name: demo-volume
+  PersistentVolumeClaim: 
+    claimName: demo-pvc
